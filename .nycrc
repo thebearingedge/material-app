@@ -1,0 +1,22 @@
+{
+  "root": "client/",
+  "include": [
+    "src/client/**/*.js"
+  ],
+  "exclude": [
+    ".git/",
+    "src/client/**/*.test.js",
+    "build/",
+    "coverage/",
+    "src/client/**/index.js",
+    "node_modules/**/node_modules/"
+  ],
+  "reporter": [
+    "lcov",
+    "text-summary"
+  ],
+  "all": true,
+  "sourceType": "module",
+  "require": "babel-register",
+  "report-dir": "coverage-client/"
+}
