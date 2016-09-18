@@ -7,7 +7,7 @@
   "scripts": {
     "lint": "eslint src/",
     "clean": "rimraf build/ && mkdirp build/public",
-    "sync": "browser-sync start --no-open -p 'localhost:3000' --files 'build/public'",
+    "sync": "browser-sync start --no-open -p 'localhost:3000' -f 'build/public'",
     "build:server": "babel -d build/ --ignore *.test,__test__ src/server",
     "build:html": "pug -P src/public -o build/public",
     "build:css": "stylus src/public -o build/public",
