@@ -1,14 +1,14 @@
 {
   "root": "client/",
   "include": [
-    "src/client/**/*.js"
+    "src/**/*.js"
   ],
   "exclude": [
     ".git/",
-    "src/client/**/*.test.js",
+    "src/**/*.test.js",
     "build/",
     "coverage/",
-    "src/client/**/index.js",
+    "src/**/index.js",
     "node_modules/**/node_modules/"
   ],
   "reporter": [
