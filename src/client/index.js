@@ -1,20 +1,19 @@
+import { document } from 'global'
 import React from 'react'
 import { render } from 'react-dom'
+import { Provider } from 'react-redux'
 import tapEvents from 'react-tap-event-plugin'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-import AppBar from 'material-ui/AppBar'
-import { document } from 'global'
+import store from './store'
+import App from './app-component'
 
 tapEvents()
 
-const App = () =>
-  <MuiThemeProvider>
-    <AppBar
-      title="Material App"
-      iconClassNameRight="muidocs-icon-navigation-expand-more"
-    />
-  </MuiThemeProvider>
-
-const $app = document.querySelector('#app')
-
-render(<App/>, $app)
+render(
+  <Provider store={ store }>
+    <MuiThemeProvider>
+      <App/>
+    </MuiThemeProvider>
+  </Provider>,
+  document.querySelector('#app')
+)

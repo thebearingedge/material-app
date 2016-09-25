@@ -1,8 +1,3 @@
-import express from 'express'
+import app from './app'
 
-const app = express()
-const assets = express.static(`${__dirname}/public`)
-
-app
-  .use(assets)
-  .listen(3000, () => process.stdout.write('Listening on 3000\n'))
+app.listen(3000, () => process.stdout.write('Listening on 3000\n'))
