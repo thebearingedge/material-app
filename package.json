@@ -30,7 +30,7 @@
     "lint": "eslint src/",
     "test": "run-s -s unit:* int:*",
     "clean": "rimraf build/ && mkdirp build/public/",
-    "cover": "rimraf coverage/ && nyc run-s -s test",
+    "cover": "rimraf coverage/ && nyc run-p -s unit:* int:*",
     "build": "run-s -s clean && run-p -s build:*",
     "sync": "browser-sync start --no-open -p 'localhost:3000' -f 'build/public/'",
     "start": "node .",
