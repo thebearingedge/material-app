@@ -29,6 +29,7 @@ before(() => {
 after(() => {
   let window, document, navigator
   Object.assign(global, { window, document, navigator })
+  process.stdout.write('====== CLIENT ======\n')
 })
 
 const mountUI = Component => mount(
