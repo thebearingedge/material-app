@@ -3,11 +3,15 @@ import { jsdom } from 'jsdom'
 import { mount } from 'enzyme'
 import chai, { expect } from 'chai'
 import chaiEnzyme from 'chai-enzyme'
+import sinonChai from 'sinon-chai'
+import 'sinon-as-promised'
 import React from 'react'
 import tapEvents from 'react-tap-event-plugin'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
-chai.use(chaiEnzyme())
+chai
+  .use(chaiEnzyme())
+  .use(sinonChai)
 
 before(() => {
   const invariant = /injectTapEventPlugin\(\)\: Can only be called once/
