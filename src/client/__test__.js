@@ -27,12 +27,11 @@ after(() => {
   Object.assign(global, { window, document, navigator })
 })
 
-const mountUI = Component =>
-  mount(
-    <MuiThemeProvider>
-      { Component }
-    </MuiThemeProvider>
-  )
+const mountUI = Component => mount(
+  <MuiThemeProvider>
+    { Component }
+  </MuiThemeProvider>
+)
 
 export {
   expect,
