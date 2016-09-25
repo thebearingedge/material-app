@@ -3,13 +3,13 @@ import { mountUI, expect } from './__test__'
 import React from 'react'
 import { Provider } from 'react-redux'
 import App from './app-component'
-import store from './store'
+import appStore from './app-store'
 
 describe('client/app-component', () => {
 
   it('connects to the store', () => {
     const wrapper = mountUI(
-      <Provider store={ store }>
+      <Provider store={ appStore() }>
         <App/>
       </Provider>
     )

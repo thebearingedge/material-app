@@ -4,13 +4,13 @@ import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import tapEvents from 'react-tap-event-plugin'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-import store from './store'
+import appStore from './app-store'
 import App from './app-component'
 
 tapEvents()
 
 render(
-  <Provider store={ store }>
+  <Provider store={ appStore() }>
     <MuiThemeProvider>
       <App/>
     </MuiThemeProvider>
