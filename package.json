@@ -31,7 +31,7 @@
     "sync": "browser-sync start --no-open -p 'localhost:3000' -f 'build/public/'",
     "start": "node .",
     "watch": "run-s -s build && run-p -s watch:build watch:start sync",
-    "precommit": "run-p -s lint build"
+    "precommit": "run-p -s lint build test"
   },
   "repository": {
     "type": "git",
