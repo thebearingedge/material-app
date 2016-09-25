@@ -1,15 +1,12 @@
 export const up = ({ schema }) =>
   schema
-    .createTable('users', tb => {
+    .createTable('thingies', tb => {
       tb.increments('id')
         .primary()
-      tb.string('username')
-        .unique()
-        .notNullable()
-      tb.string('password')
+      tb.string('description')
         .notNullable()
     })
 
-export const down = ({ schema }) => 
+export const down = ({ schema }) =>
   schema
-    .dropTable('users')
+    .dropTable('thingies')
