@@ -32,9 +32,9 @@ after(() => {
   process.stdout.write('====== CLIENT ======\n')
 })
 
-const mountUI = Component => mount(
+const mountUI = children => mount(
   <MuiThemeProvider>
-    { Component }
+    { children }
   </MuiThemeProvider>
 )
 
